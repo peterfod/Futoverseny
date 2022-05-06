@@ -1,0 +1,2 @@
+# Futoverseny
+Szoftverfejlesztő vizsgafeladat (formos)
