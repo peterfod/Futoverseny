@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Futoverseny
 {
-	public class Futok
+	public class Futo
 	{
 		public string Rajtszam { get; set; }
 		public string Nev { get; set; }
@@ -18,7 +18,7 @@ namespace Futoverseny
 		public int Nap { get; set; }
 		public int Kor { get; set; }
 
-		public Futok(string sor)
+		public Futo(string sor)
 		{
 			string[] d = sor.Split(';');
 			Rajtszam = d[0];

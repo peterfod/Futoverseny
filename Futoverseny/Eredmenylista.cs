@@ -19,9 +19,7 @@ namespace Futoverseny
 
 		private void frmEredmenylista_Load(object sender, EventArgs e)
 		{
-			List<Futok> rendezettLista = frmMain.lista.OrderByDescending(o => o.Eredmeny).ToList();
-			
-			foreach (var sor in rendezettLista)
+			foreach (var sor in frmMain.lista.OrderByDescending(f => f.Eredmeny))
 			{
 				rtbEredmeny.Text += sor.Nev + ": "+ sor.Eredmeny + "\n";
 			}

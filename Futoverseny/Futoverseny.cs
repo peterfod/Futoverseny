@@ -13,7 +13,7 @@ namespace Futoverseny
 {
 	public partial class frmMain : Form
 	{
-		public static List<Futok> lista = new List<Futok>();
+		public static List<Futo> lista = new List<Futo>();
 		public static string fajlnev { get; set; }
 		public frmMain()
 		{
@@ -29,11 +29,12 @@ namespace Futoverseny
 		{
 			btnBeolvas.Enabled = false;
 			mniBeolvas.Enabled = false;
+			mniEredmenylista.Enabled = true;
 			//var sr = new StreamReader("futok.txt", Encoding.Latin1);
 			var sr = new StreamReader("futok.txt", Encoding.GetEncoding("iso-8859-1"));
 			while (!sr.EndOfStream)
 			{
-				var sor = new Futok(sr.ReadLine());
+				var sor = new Futo(sr.ReadLine());
 				lista.Add(sor);
 				lsbResztvevok.Items.Add(sor.Nev);
 			}
@@ -52,9 +53,9 @@ namespace Futoverseny
 		{
 			this.Hide();
 			//create an instance of frmEredmenylista:
-			frmEredmenylista ar = new frmEredmenylista();
-			ar.ShowDialog();
-			ar.Dispose();
+			frmEredmenylista el = new frmEredmenylista();
+			el.ShowDialog();
+			el.Dispose();
 			this.Show();
 		}
 	}

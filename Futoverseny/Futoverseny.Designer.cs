@@ -150,8 +150,8 @@ namespace Futoverseny
 			// 
 			// mniEredmenylista
 			// 
-			this.mniEredmenylista.Name = "mniEredmenylista";
 			resources.ApplyResources(this.mniEredmenylista, "mniEredmenylista");
+			this.mniEredmenylista.Name = "mniEredmenylista";
 			this.mniEredmenylista.Click += new System.EventHandler(this.mniEredmenylista_Click);
 			// 
 			// lsbResztvevok
